@@ -38,7 +38,7 @@ struct ContentView: View {
           
             .navigationTitle("Titel")
             .sheet(isPresented: $showAddItemView, content: {
-                addItemview(showAddItemView: $showAddItemView)
+                //addItemview()
             })
         }
     }

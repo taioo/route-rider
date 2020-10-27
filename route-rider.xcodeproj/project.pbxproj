@@ -14,6 +14,7 @@
 		E0F29B462542D2E600275058 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F29B452542D2E600275058 /* Persistence.swift */; };
 		E0F29B492542D2E600275058 /* route_rider.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0F29B472542D2E600275058 /* route_rider.xcdatamodeld */; };
 		E0F29B5225444F2F00275058 /* addItemview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F29B5125444F2F00275058 /* addItemview.swift */; };
+		E0F8ADDD2548702900D2F81B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8ADDC2548702900D2F81B /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E0F29B482542D2E600275058 /* route_rider.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = route_rider.xcdatamodel; sourceTree = "<group>"; };
 		E0F29B4A2542D2E600275058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0F29B5125444F2F00275058 /* addItemview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemview.swift; sourceTree = "<group>"; };
+		E0F8ADDC2548702900D2F81B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E0F29B472542D2E600275058 /* route_rider.xcdatamodeld */,
 				E0F29B422542D2E600275058 /* Preview Content */,
 				E0F29B5125444F2F00275058 /* addItemview.swift */,
+				E0F8ADDC2548702900D2F81B /* LocationService.swift */,
 			);
 			path = "route-rider";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F8ADDD2548702900D2F81B /* LocationService.swift in Sources */,
 				E0F29B492542D2E600275058 /* route_rider.xcdatamodeld in Sources */,
 				E0F29B462542D2E600275058 /* Persistence.swift in Sources */,
 				E0F29B3F2542D2E200275058 /* ContentView.swift in Sources */,
