@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-26T23:14:39.867Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.2 Safari/605.1.15" etag="ki250CeqIO2ZxscENJwf" version="14.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-27T13:26:46.358Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.2 Safari/605.1.15" etag="-8HAMTXJxNz6XDDFztxt" version="14.1.2" type="github">
   <diagram id="tAp-OK5lOTIRStpvpJNH" name="Page-1">
-    <mxGraphModel dx="1229" dy="1369" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2034" dy="1769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -38,26 +38,11 @@
             <mxPoint y="30" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--29" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=1;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.location_2;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
-          <mxGeometry x="160" y="5.75" width="14" height="12" as="geometry" />
-        </mxCell>
         <mxCell id="uBkspF1C4MyCDrgNjVe--30" value="&lt;p style=&quot;line-height: 100%&quot;&gt;Heidelberg -&amp;gt; Hamburg&amp;nbsp;&lt;br&gt;5 hours and 30 min&lt;/p&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
           <mxGeometry x="2.2737367544323206e-13" y="58" width="176" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uBkspF1C4MyCDrgNjVe--31" value="&lt;p style=&quot;line-height: 100%&quot;&gt;Mannheim -&amp;gt;Heidelberg&amp;nbsp;&lt;br&gt;30 min&lt;/p&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
           <mxGeometry x="2.2737367544323206e-13" y="88" width="176" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--37" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=1;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.share;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
-          <mxGeometry x="140" y="5.25" width="10" height="12.5" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--38" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=1;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.share;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
-          <mxGeometry x="140" y="38" width="10" height="12.5" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--39" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=1;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.share;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
-          <mxGeometry x="140" y="66.75" width="10" height="12.5" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--40" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=1;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.share;" vertex="1" parent="2kOh0GnKaoZjC8oCAU-o-15">
-          <mxGeometry x="140" y="96.75" width="10" height="12.5" as="geometry" />
         </mxCell>
         <mxCell id="2kOh0GnKaoZjC8oCAU-o-22" value="hei" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" parent="1" vertex="1">
           <mxGeometry x="510" y="40" width="140" height="15" as="geometry" />
@@ -286,49 +271,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="530" width="190" height="330" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
-          <mxGeometry x="215" y="500" width="200" height="390" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--3" value="Heidelberg" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" vertex="1" parent="1">
-          <mxGeometry x="245" y="580" width="140" height="15" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--4" value="Mannheim" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" vertex="1" parent="1">
-          <mxGeometry x="245" y="640" width="140" height="15" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--5" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="225" y="730" width="176" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--7" value="Worms -&amp;gt; Hamburg&amp;nbsp;&lt;br&gt;5 hours and 30 min" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="uBkspF1C4MyCDrgNjVe--5">
-          <mxGeometry width="176" height="30" relative="1" as="geometry">
-            <mxPoint y="60" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--8" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="uBkspF1C4MyCDrgNjVe--5">
-          <mxGeometry width="176" height="30" relative="1" as="geometry">
-            <mxPoint y="90" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--21" value="Worms -&amp;gt; Hamburg&amp;nbsp;&lt;br&gt;5 hours and 30 min" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="uBkspF1C4MyCDrgNjVe--5">
-          <mxGeometry y="90" width="176" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--22" value="Worms -&amp;gt; Hamburg&amp;nbsp;&lt;br&gt;5 hours and 30 min" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="uBkspF1C4MyCDrgNjVe--5">
-          <mxGeometry y="30" width="176" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--23" value="Mannheim -&amp;gt; Heidelberg&amp;nbsp;&lt;br&gt;5 hours and 30 min" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="uBkspF1C4MyCDrgNjVe--5">
-          <mxGeometry width="176" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--10" value="Save" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#E6E6E6;align=center;strokeColor=#B3B3B3;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="262.25" y="700" width="105.5" height="16.88" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--11" value="1:30PM &amp;nbsp;22.12.2020" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#E6E6E6;align=center;strokeColor=#B3B3B3;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="255" y="600" width="105.5" height="16.88" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--12" value="2:00PM 22.12.2020" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#E6E6E6;align=center;strokeColor=#B3B3B3;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="262.25" y="660" width="105.5" height="16.88" as="geometry" />
-        </mxCell>
         <mxCell id="uBkspF1C4MyCDrgNjVe--25" value="Hier wird die zeit ausgerechnet und dargestellt" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="15" y="128.44000000000005" width="120" height="60" as="geometry" />
         </mxCell>
@@ -340,28 +282,6 @@
         </mxCell>
         <mxCell id="uBkspF1C4MyCDrgNjVe--34" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/maps-and-navigation-free/32/Maps_Maps_Navigation_Route_Pin_Location-20-128.png;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="310" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--35" value="Start-route ist in deine nähe" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="390" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--36" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;endFill=0;entryX=1.01;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="uBkspF1C4MyCDrgNjVe--35" target="uBkspF1C4MyCDrgNjVe--29">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="510" y="240.19999999999982" as="sourcePoint" />
-            <mxPoint x="400" y="240" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="440" y="234" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--41" value="Route Teilen" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="390" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uBkspF1C4MyCDrgNjVe--42" value="" style="endArrow=none;html=1;dashed=1;endFill=0;entryX=-0.061;entryY=1.087;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="uBkspF1C4MyCDrgNjVe--41" target="uBkspF1C4MyCDrgNjVe--40">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="450" y="400" as="sourcePoint" />
-            <mxPoint x="404.1399999999999" y="243.75" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
