@@ -18,7 +18,7 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
     var searchResults = [MKLocalSearchCompletion]()
     
     var searchSelection = MKLocalSearchCompletion()
-    var mainView: ViewController? = nil
+    var mainView: MainViewController? = nil
 
     var matchedItem = MKMapItem()
     var itemName = String()
@@ -67,7 +67,6 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
         
         let completion = searchResults[indexPath.row]
         searchSelection = completion
-        mainView?.searchSelection = searchSelection
         mainView?.userDidSelect(searchSelection: searchSelection)
         _ = navigationController?.popViewController(animated: true)
 
@@ -75,7 +74,6 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
         let search = MKLocalSearch(request: searchRequest)
         search.start { (response, error) in
             let coordinate = response?.mapItems[0].placemark.coordinate
-                 
             print("#################"+String(describing:coordinate))
         }
     }// didSelectRowAt
