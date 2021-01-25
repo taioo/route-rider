@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0729EC225BF253800BE2894 /* RouteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */; };
+		E0729EC325BF253800BE2894 /* RouteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */; };
+		E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */; };
+		E0729ECF25BF258A00BE2894 /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */; };
 		E0AF67B32598C8FE00C5262F /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */; };
 		E0DA82F625A229CF004E2F15 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA82F525A229CF004E2F15 /* MainViewController.swift */; };
 		E0F8ADEE25487B7600D2F81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8ADED25487B7600D2F81B /* AppDelegate.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoutesModel.xcdatamodel; sourceTree = "<group>"; };
+		E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
 		E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		E0DA82F525A229CF004E2F15 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E0F8ADEA25487B7600D2F81B /* road-rider-storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "road-rider-storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +74,10 @@
 				E0F8ADF925487B7A00D2F81B /* Assets.xcassets */,
 				E0F8ADFB25487B7A00D2F81B /* LaunchScreen.storyboard */,
 				E0F8ADFE25487B7A00D2F81B /* Info.plist */,
+				E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */,
+				E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */,
+				E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */,
+				E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */,
 			);
 			path = "road-rider-storyboard";
 			sourceTree = "<group>";
@@ -144,6 +156,10 @@
 				E0F8ADF025487B7600D2F81B /* SceneDelegate.swift in Sources */,
 				E0AF67B32598C8FE00C5262F /* LocationSearchViewController.swift in Sources */,
 				E0DA82F625A229CF004E2F15 /* MainViewController.swift in Sources */,
+				E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */,
+				E0729EC325BF253800BE2894 /* RouteEntity+CoreDataProperties.swift in Sources */,
+				E0729EC225BF253800BE2894 /* RouteEntity+CoreDataClass.swift in Sources */,
+				E0729ECF25BF258A00BE2894 /* RoutesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +361,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */,
+			);
+			currentVersion = E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */;
+			path = RoutesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E0F8ADE225487B7600D2F81B /* Project object */;
 }
