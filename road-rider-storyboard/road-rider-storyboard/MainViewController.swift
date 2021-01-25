@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 
 class MainViewController: UIViewController {
@@ -16,8 +17,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var fromButton: UIButton!
     @IBOutlet weak var fromDatePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var routesTable: UITableView!
-    
     @IBOutlet weak var araivalDate: UIButton!
     
     private var fromDate: Date?
@@ -25,11 +24,8 @@ class MainViewController: UIViewController {
     private var lastButton: UIButton?
     private var locationFrom: MKLocalSearchCompletion?
     private var locationTo: MKLocalSearchCompletion?
-    
-    
-    
-    
-    
+    private var routesTable: RoutesTableViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,11 +39,21 @@ class MainViewController: UIViewController {
     
     @IBAction func saveRoute(_ sender: UIButton) {
         // save to coredata
+        createData();
+        
+        saveButton.isEnabled = false
+        saveButton.alpha = 0.5
+        routesTable?.refresh()
     }
     
     @IBAction func datePickerChanged(sender: UIDatePicker) {
               fromDate = sender.date
     }
+    
+    override func didReceiveMemoryWarning() {
+          super.didReceiveMemoryWarning()
+          // Dispose of any resources that can be recreated.
+      }
     
     
     
@@ -57,7 +63,14 @@ class MainViewController: UIViewController {
         {
             lastButton = sender as? UIButton
             (segue.destination as! LocationSearchViewController).mainView = self
+    
         }
+        
+        if ( segue.destination is RoutesTableViewController)
+        {
+            routesTable = segue.destination as? RoutesTableViewController
+        }
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
@@ -109,7 +122,6 @@ class MainViewController: UIViewController {
             self.getCordinates(location: to) { (cordinatesTo: CLLocationCoordinate2D?, error: Error?) in
                 request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: cordinatesTo!.latitude, longitude: cordinatesTo!.longitude), addressDictionary: nil))
                 let directions = MKDirections(request: request)
-                
                 directions.calculate { [unowned self] response, error in
                     guard let unwrappedResponse = response else { return }
 
@@ -131,4 +143,40 @@ extension Date {
     dateFormatter.timeStyle = .short
     return dateFormatter.string(from: self)
   }
+}
+
+
+
+// MARK: - Core Data func
+extension MainViewController{
+    
+    
+       func createData(){
+           
+           //container is set up in the AppDelegates so we need to refer that container.
+           guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+           
+           //create a context from this container
+           let managedContext = appDelegate.persistentContainer.viewContext
+           
+           //connect to entity.
+           let RouteEntity = NSEntityDescription.entity(forEntityName: "RouteEntity", in: managedContext)!
+           
+               let route = NSManagedObject(entity: RouteEntity, insertInto: managedContext)
+               route.setValue(fromDate, forKeyPath: "dateFrom")
+               route.setValue(toDate, forKeyPath: "dateTo")
+               route.setValue(locationFrom?.title, forKeyPath: "from")
+               route.setValue(locationTo?.title, forKeyPath: "to")
+    
+
+           
+           
+           //save inside the Core Data
+           do {
+               try managedContext.save()
+           } catch let error as NSError {
+               print("Could not save. \(error), \(error.userInfo)")
+           }
+       }
+    
 }
