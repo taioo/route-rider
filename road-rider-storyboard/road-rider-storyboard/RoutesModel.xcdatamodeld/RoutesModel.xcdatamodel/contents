@@ -6,6 +6,9 @@
         <attribute name="from" optional="YES" attributeType="String"/>
         <attribute name="to" optional="YES" attributeType="String"/>
     </entity>
+    <configuration name="CloudKit" usedWithCloudKit="YES">
+        <memberEntity name="RouteEntity"/>
+    </configuration>
     <elements>
         <element name="RouteEntity" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
