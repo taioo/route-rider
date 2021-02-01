@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03A3BF925C860DA00C6E9E4 /* LocationManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BF825C860DA00C6E9E4 /* LocationManage.swift */; };
+		E03A3C0025C8612700C6E9E4 /* DataManageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BFF25C8612700C6E9E4 /* DataManageProtocol.swift */; };
 		E0729EC225BF253800BE2894 /* RouteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */; };
 		E0729EC325BF253800BE2894 /* RouteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */; };
 		E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E03A3BF825C860DA00C6E9E4 /* LocationManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManage.swift; sourceTree = "<group>"; };
+		E03A3BFF25C8612700C6E9E4 /* DataManageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManageProtocol.swift; sourceTree = "<group>"; };
 		E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoutesModel.xcdatamodel; sourceTree = "<group>"; };
@@ -74,7 +78,9 @@
 				E0F8ADF925487B7A00D2F81B /* Assets.xcassets */,
 				E0F8ADFB25487B7A00D2F81B /* LaunchScreen.storyboard */,
 				E0F8ADFE25487B7A00D2F81B /* Info.plist */,
+				E03A3BFF25C8612700C6E9E4 /* DataManageProtocol.swift */,
 				E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */,
+				E03A3BF825C860DA00C6E9E4 /* LocationManage.swift */,
 				E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */,
 				E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */,
 				E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */,
@@ -156,9 +162,11 @@
 				E0F8ADF025487B7600D2F81B /* SceneDelegate.swift in Sources */,
 				E0AF67B32598C8FE00C5262F /* LocationSearchViewController.swift in Sources */,
 				E0DA82F625A229CF004E2F15 /* MainViewController.swift in Sources */,
+				E03A3C0025C8612700C6E9E4 /* DataManageProtocol.swift in Sources */,
 				E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */,
 				E0729EC325BF253800BE2894 /* RouteEntity+CoreDataProperties.swift in Sources */,
 				E0729EC225BF253800BE2894 /* RouteEntity+CoreDataClass.swift in Sources */,
+				E03A3BF925C860DA00C6E9E4 /* LocationManage.swift in Sources */,
 				E0729ECF25BF258A00BE2894 /* RoutesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

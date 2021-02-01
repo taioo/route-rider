@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
     private var locationTo: MKLocalSearchCompletion?
     private var routesTable: RoutesTableViewController?
 
+    var myMapSearch = MyMapClass()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,8 +41,7 @@ class MainViewController: UIViewController {
     
     @IBAction func saveRoute(_ sender: UIButton) {
         // save to coredata
-        createData();
-        
+        DataClass().createData(fromDate: fromDate, toDate: toDate, locationFrom: myMapSearch.getTitelLocationFrom(), locationTo: myMapSearch.getTitelLocationTo());
         saveButton.isEnabled = false
         saveButton.alpha = 0.5
         routesTable?.refresh()
@@ -75,15 +76,19 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
-    func userDidSelect(searchSelection: MKLocalSearchCompletion) {
+    func userDidSelect(index : Int) {
         if( lastButton == fromButton ) {
-            locationFrom = searchSelection
+            myMapSearch.saveLocationFrom(index: index)
+            lastButton?.setTitle(myMapSearch.locationFrom?.title, for: .normal)
+            myMapSearch.searchResults.removeAll()
         } else if(lastButton == toButton){
-            locationTo = searchSelection
+            myMapSearch.saveLocationTo(index: index)
+            lastButton?.setTitle(myMapSearch.locationTo?.title, for: .normal)
+            myMapSearch.searchResults.removeAll()
         }
-        
-        if( locationFrom != nil && locationTo != nil ) {
-            calculateTimeForRoute(from: locationFrom!, to: locationTo!) { (travelTime: Double?, error: Error?) -> Void in
+
+        if( myMapSearch.locationFrom != nil && myMapSearch.locationTo != nil ) {
+            myMapSearch.calculateTimeForRoute() { (travelTime: Double?, error: Error?) -> Void in
                 // save enabled
                 //let travelTimeInMin = Int(travelTime!/60)
                 self.toDate = self.fromDate?.addingTimeInterval(travelTime!)
@@ -92,45 +97,6 @@ class MainViewController: UIViewController {
                 self.araivalDate.setTitle(self.toDate?.asString(style: .full) , for: .normal)
                 self.araivalDate.isEnabled = true
                 self.araivalDate.alpha = 1
-            }
-        }
-        
-        
-        lastButton?.setTitle(searchSelection.title, for: .normal)
-    }
-    
-    private func getCordinates(location:MKLocalSearchCompletion, completion: @escaping (CLLocationCoordinate2D?, Error?) -> Void) {
-        let searchRequest = MKLocalSearch.Request(completion: location)
-        let search = MKLocalSearch(request: searchRequest)
-        search.start { (response, error) in
-            let coordinate = response?.mapItems[0].placemark.coordinate
-            completion(coordinate,error)
-        }
-    }
-    
-    private func calculateTimeForRoute(from: MKLocalSearchCompletion,to:MKLocalSearchCompletion, completion: @escaping (Double?, Error?) -> Void) {
-        
-        let request = MKDirections.Request()
-        request.requestsAlternateRoutes = true
-        request.transportType = .automobile
-        
-        // MKLocalSearchCompletion
-        getCordinates(location: from) { (cordinatesFrom: CLLocationCoordinate2D?, error: Error?) in
-            
-            request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: cordinatesFrom!.latitude, longitude: cordinatesFrom!.longitude), addressDictionary: nil))
-            
-            self.getCordinates(location: to) { (cordinatesTo: CLLocationCoordinate2D?, error: Error?) in
-                request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: cordinatesTo!.latitude, longitude: cordinatesTo!.longitude), addressDictionary: nil))
-                let directions = MKDirections(request: request)
-                directions.calculate { [unowned self] response, error in
-                    guard let unwrappedResponse = response else { return }
-
-                    let travelTime = unwrappedResponse.routes[0].expectedTravelTime
-                    completion(travelTime,error)
-
-                    //self.AraivalDate.text = String(Int(travelTime/60))
-                    //print(Int(travelTime/60))
-                }
             }
         }
     }
@@ -143,40 +109,4 @@ extension Date {
     dateFormatter.timeStyle = .short
     return dateFormatter.string(from: self)
   }
-}
-
-
-
-// MARK: - Core Data func
-extension MainViewController{
-    
-    
-       func createData(){
-           
-           //container is set up in the AppDelegates so we need to refer that container.
-           guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-           
-           //create a context from this container
-           let managedContext = appDelegate.persistentContainer.viewContext
-           
-           //connect to entity.
-           let RouteEntity = NSEntityDescription.entity(forEntityName: "RouteEntity", in: managedContext)!
-           
-               let route = NSManagedObject(entity: RouteEntity, insertInto: managedContext)
-               route.setValue(fromDate, forKeyPath: "dateFrom")
-               route.setValue(toDate, forKeyPath: "dateTo")
-               route.setValue(locationFrom?.title, forKeyPath: "from")
-               route.setValue(locationTo?.title, forKeyPath: "to")
-    
-
-           
-           
-           //save inside the Core Data
-           do {
-               try managedContext.save()
-           } catch let error as NSError {
-               print("Could not save. \(error), \(error.userInfo)")
-           }
-       }
-    
 }

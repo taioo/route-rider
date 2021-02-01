@@ -9,9 +9,8 @@
 import UIKit
 import CoreData
 
-class RoutesTableViewController: UITableViewController {
+class RoutesTableViewController: UITableViewController  {
 
-    
     private var myData: [RouteEntity] = []
     
     
@@ -28,7 +27,7 @@ class RoutesTableViewController: UITableViewController {
     }
     
     func refresh (){
-        self.myData = retrieveData()
+        self.myData = DataClass().myData
         self.tableView.reloadData()
     }
 
@@ -51,58 +50,6 @@ class RoutesTableViewController: UITableViewController {
         (cell.viewWithTag(2) as? UILabel)?.text = myData[indexPath.item].to
         (cell.viewWithTag(3) as? UILabel)?.text = myData[indexPath.item].dateFrom?.asString(style: .short)
         (cell.viewWithTag(4) as? UILabel)?.text = myData[indexPath.item].dateTo?.asString(style: .short)
-   
         return cell
     }
-    
-    
-    func convertToJSONArray(moArray: [NSManagedObject]) -> Any {
-        var jsonArray: [[String: Any]] = []
-        for item in moArray {
-            var dict: [String: Any] = [:]
-            for attribute in item.entity.attributesByName {
-                //check if value is present, then add key to dictionary so as to avoid the nil value crash
-                if let value = item.value(forKey: attribute.key) {
-                    dict[attribute.key] = value
-                }
-            }
-            jsonArray.append(dict)
-        }
-        return jsonArray
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    private func retrieveData() -> [RouteEntity] {
-        
-        //refer that container.
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
-        
-        //create a context from this container
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        //request of type NSFetchRequest  for the entity
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "RouteEntity")
-        
-
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            return result as? [RouteEntity] ?? []
-            
-        } catch {
-            
-            print("Failed")
-            return []
-        }
-    }
-
 }

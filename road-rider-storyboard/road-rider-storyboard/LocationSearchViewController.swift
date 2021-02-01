@@ -9,27 +9,21 @@
 import UIKit
 import MapKit
 
-class LocationSearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, MKMapViewDelegate, CLLocationManagerDelegate  {
+class LocationSearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, CLLocationManagerDelegate  {
     @IBOutlet weak var textFieldOutlet: UITextField!
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-    // map variables
-    var searchCompleter = MKLocalSearchCompleter()
-    var searchResults = [MKLocalSearchCompletion]()
-    
-    var searchSelection = MKLocalSearchCompletion()
-    var mainView: MainViewController? = nil
 
-    var matchedItem = MKMapItem()
-    var itemName = String()
+    
+
+    var mainView: MainViewController? = nil
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.hideKeyboard()
         textFieldOutlet.addTarget(self, action: #selector(textFieldEditingDidChange), for: UIControl.Event.editingChanged)
         
         // Set the delegate for the Completer
-        searchCompleter.delegate = self
+        mainView!.myMapSearch.searchCompleter.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,65 +41,42 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
+        return mainView!.myMapSearch.searchResults.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        
         // Configure the cell...
-        cell.textLabel?.text = self.searchResults[indexPath.row].title
-        cell.detailTextLabel?.text = self.searchResults[indexPath.row].subtitle
+        cell.textLabel?.text = mainView!.myMapSearch.getTitelAtIndex(index: indexPath.row)
+        cell.detailTextLabel?.text = mainView!.myMapSearch.getsubtitelAtIndex(index: indexPath.row)
         return cell
     }// cellfor row
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let completion = searchResults[indexPath.row]
-        searchSelection = completion
-        mainView?.userDidSelect(searchSelection: searchSelection)
+        mainView?.userDidSelect(index: indexPath.row)
         _ = navigationController?.popViewController(animated: true)
-
-        let searchRequest = MKLocalSearch.Request(completion: completion)
-        let search = MKLocalSearch(request: searchRequest)
-        search.start { (response, error) in
-            let coordinate = response?.mapItems[0].placemark.coordinate
-            print("#################"+String(describing:coordinate))
-        }
     }// didSelectRowAt
     
     
     // MARK: - TextField Delegates
     @IBAction func textFieldEditingDidChange(_ sender: Any) {
-        self.searchResults.removeAll()
+        mainView!.myMapSearch.searchResults.removeAll()
         // send the text to the completer
-        searchCompleter.queryFragment = self.textFieldOutlet.text!
+        mainView!.myMapSearch.searchCompleter.queryFragment = self.textFieldOutlet.text!
     }
-
-}
-
-// MapKit methods
-extension LocationSearchViewController: MKLocalSearchCompleterDelegate {
-   func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-       searchResults = completer.results
-       self.tableViewOutlet.reloadData()
-   }
 }
 
 // Hide keyboard if view is tapped
-extension UIViewController
-{
+extension UIViewController{
     // to call place self.hideKeyboard() in viewdidload
     func hideKeyboard()
     {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(UIViewController.dismissKeyboard))
-        
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
