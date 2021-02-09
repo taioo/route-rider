@@ -3,17 +3,11 @@ Libraries
 * MapKit
 * CoreData
 
-![w](d.mp4)
-</br>
-![d](w.mp4)
+![white Mode](https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif)
 
+<br>
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true">
-    <source src="w.mp4" type="video/mp4">
-    <source src="d.mp4" type="video/mp4">
-  </video>
-</figure>
+![dark Mode](https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif)
 
 
 <img src="attachment/diagram/1.png"/>
