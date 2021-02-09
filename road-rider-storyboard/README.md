@@ -3,11 +3,10 @@ Libraries
 * MapKit
 * CoreData
 
-
-<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif" width="250" height="500"/>
-<br>
-<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif" width="250" height="500"/>
-
+<p float="left">
+<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif"/>
+<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif"/>
+</p>
 
 
 <img src="attachment/diagram/1.png"/>
