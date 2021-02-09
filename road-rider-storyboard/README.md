@@ -4,8 +4,8 @@ Libraries
 * CoreData
 
 <p float="left">
-<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif"/>
-<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif"/>
+<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif" width="500" height="500"/>
+<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif" width="500" height="500"/>
 </p>
 
 
