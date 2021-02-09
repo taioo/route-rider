@@ -11,9 +11,7 @@ import CoreData
 import UIKit
 
 protocol DataProtocol {
-    init()
     var myData: [RouteEntity] { get }
-    func retrieveData() -> [RouteEntity]
     func createData(fromDate: Date?, toDate: Date? , locationFrom: String? , locationTo: String?)
 }
 
@@ -24,11 +22,11 @@ class DataClass: DataProtocol{
      var myData: [RouteEntity] = []
     
 
-    required init() {
+    init() {
         myData = retrieveData()
      }
     
-     func retrieveData() -> [RouteEntity] {
+    internal func retrieveData() -> [RouteEntity] {
         
         //refer that container.
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
@@ -53,33 +51,31 @@ class DataClass: DataProtocol{
     
     
     
-       func createData(   fromDate: Date?, toDate: Date? , locationFrom: String? , locationTo: String?){
-           
-           //container is set up in the AppDelegates so we need to refer that container.
-           guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-           
-           //create a context from this container
-           let managedContext = appDelegate.persistentContainer.viewContext
-           
-           //connect to entity.
-           let RouteEntity = NSEntityDescription.entity(forEntityName: "RouteEntity", in: managedContext)!
-           
-               let route = NSManagedObject(entity: RouteEntity, insertInto: managedContext)
-               route.setValue(fromDate, forKeyPath: "dateFrom")
-               route.setValue(toDate, forKeyPath: "dateTo")
-               route.setValue(locationFrom, forKeyPath: "from")
-               route.setValue(locationTo, forKeyPath: "to")
+    func createData(   fromDate: Date?, toDate: Date? , locationFrom: String? , locationTo: String?){
+        
+        //container is set up in the AppDelegates so we need to refer that container.
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        //create a context from this container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //connect to entity.
+        let RouteEntity = NSEntityDescription.entity(forEntityName: "RouteEntity", in: managedContext)!
+        
+        let route = NSManagedObject(entity: RouteEntity, insertInto: managedContext)
+        route.setValue(fromDate, forKeyPath: "dateFrom")
+        route.setValue(toDate, forKeyPath: "dateTo")
+        route.setValue(locationFrom, forKeyPath: "from")
+        route.setValue(locationTo, forKeyPath: "to")
     
 
-           
-           
-           //save inside the Core Data
-           do {
-               try managedContext.save()
-           } catch let error as NSError {
-               print("Could not save. \(error), \(error.userInfo)")
-           }
-       }
+        //save inside the Core Data
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
     
     
     

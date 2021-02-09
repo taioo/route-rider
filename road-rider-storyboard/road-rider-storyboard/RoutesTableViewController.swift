@@ -52,4 +52,14 @@ class RoutesTableViewController: UITableViewController  {
         (cell.viewWithTag(4) as? UILabel)?.text = myData[indexPath.item].dateTo?.asString(style: .short)
         return cell
     }
+    
+}
+
+extension Date {
+  func asString(style: DateFormatter.Style) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = style
+    dateFormatter.timeStyle = .short
+    return dateFormatter.string(from: self)
+  }
 }

@@ -13,9 +13,6 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var textFieldOutlet: UITextField!
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-
-    
-
     var mainView: MainViewController? = nil
     
     override func viewDidLoad() {
@@ -23,7 +20,7 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
         textFieldOutlet.addTarget(self, action: #selector(textFieldEditingDidChange), for: UIControl.Event.editingChanged)
         
         // Set the delegate for the Completer
-        mainView!.myMapSearch.searchCompleter.delegate = self
+        mainView!.myMapSearch.setDelegate(delegateObject: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,24 +45,22 @@ class LocationSearchViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         // Configure the cell...
-        cell.textLabel?.text = mainView!.myMapSearch.getTitelAtIndex(index: indexPath.row)
-        cell.detailTextLabel?.text = mainView!.myMapSearch.getsubtitelAtIndex(index: indexPath.row)
+        cell.textLabel?.text = mainView!.myMapSearch.searchResults[indexPath.row].title
+        cell.detailTextLabel?.text = mainView!.myMapSearch.searchResults[indexPath.row].subtitle
         return cell
     }// cellfor row
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         mainView?.userDidSelect(index: indexPath.row)
-        _ = navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }// didSelectRowAt
     
     
     // MARK: - TextField Delegates
     @IBAction func textFieldEditingDidChange(_ sender: Any) {
-        mainView!.myMapSearch.searchResults.removeAll()
-        // send the text to the completer
-        mainView!.myMapSearch.searchCompleter.queryFragment = self.textFieldOutlet.text!
+        mainView!.myMapSearch.setQueryFragment(text: self.textFieldOutlet.text!)
     }
 }
 

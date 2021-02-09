@@ -9,56 +9,91 @@
 import Foundation
 import MapKit
 
+struct Location {
+    var title: String
+    var subtitle: String
+}
+
+
 protocol MyMapProtocol{
-    var searchResults: [MKLocalSearchCompletion] { get set }
-    var searchCompleter: MKLocalSearchCompleter { get set }
-    var locationFrom: MKLocalSearchCompletion? { get set }
-    var locationTo: MKLocalSearchCompletion? { get set }
+    var searchResults: [Location] { get }
+    var locationFrom: Location? { get }
+    var locationTo: Location? { get }
     
-    func getTitelAtIndex (index: Int) -> String
-    func getsubtitelAtIndex (index: Int) -> String
+    func setQueryFragment(text: String)
     func saveLocationFrom(index: Int)
     func saveLocationTo(index: Int)
-    func getTitelLocationFrom()-> String
-    func getTitelLocationTo()-> String
+    func setDelegate(delegateObject: Any)
     func calculateTimeForRoute(completion: @escaping (Double?, Error?) -> Void)
 }
 
 class MyMapClass: MyMapProtocol{
     
-    var searchResults = [MKLocalSearchCompletion]()
-    var searchCompleter = MKLocalSearchCompleter()
-    var locationFrom: MKLocalSearchCompletion?
-    var locationTo: MKLocalSearchCompletion?
-    private var matchedItem = MKMapItem()
+    var mkSearchResults: [MKLocalSearchCompletion]
+    private var mkSearchCompleter: MKLocalSearchCompleter
+    private var mkLocationFrom: MKLocalSearchCompletion?
+    private var mkLocationTo: MKLocalSearchCompletion?
     
-    
-
-    func getTitelAtIndex (index: Int) -> String{
-        return searchResults[index].title
+    var searchResults: [Location]{
+        get {
+            return mkSearchResults.map { element in
+                Location(
+                    title: element.title,
+                    subtitle: element.subtitle
+                )
+            }
+        }
+        
+        set{ }
+    }
+    var locationFrom: Location? {
+        get {
+            return mkLocationFrom != nil ?
+                Location(
+                    title: mkLocationFrom!.title,
+                    subtitle: mkLocationFrom!.subtitle
+                ) : nil;
+        }
+    }
+    var locationTo: Location? {
+        get {
+            return mkLocationTo != nil ? Location(
+                title: mkLocationTo!.title,
+                subtitle: mkLocationTo!.subtitle
+                ) : nil;
+        }
     }
     
-    func getsubtitelAtIndex (index: Int) -> String{
-        return searchResults[index].subtitle
+    init() {
+        mkSearchResults = [MKLocalSearchCompletion]()
+        mkSearchCompleter = MKLocalSearchCompleter()
+    }
+    
+    func emptySearchResult(){
+        mkSearchResults.removeAll()
+        searchResults.removeAll()
+    }
+    
+    func setQueryFragment(text: String){
+        emptySearchResult()
+        // send the text to the completer
+        mkSearchCompleter.queryFragment = text
     }
     
     
     func saveLocationFrom(index: Int){
-        locationFrom = searchResults[index]
+        mkLocationFrom = mkSearchResults[index]
     }
     
     func saveLocationTo(index: Int){
-        locationTo = searchResults[index]
+        mkLocationTo = mkSearchResults[index]
     }
     
     
-    func getTitelLocationFrom()-> String{
-        return locationFrom!.title
+    func setDelegate(delegateObject: Any){
+        mkSearchCompleter.delegate = (delegateObject as! MKLocalSearchCompleterDelegate)
     }
     
-    func getTitelLocationTo()-> String{
-        return locationTo!.title
-    }
     
     
     func calculateTimeForRoute(completion: @escaping (Double?, Error?) -> Void) {
@@ -68,19 +103,19 @@ class MyMapClass: MyMapProtocol{
         request.transportType = .automobile
         
         // MKLocalSearchCompletion
-        getCordinates(location: locationFrom) { (cordinatesFrom: CLLocationCoordinate2D?, error: Error?) in
+        getCordinates(location: mkLocationFrom) { (cordinatesFrom: CLLocationCoordinate2D?, error: Error?) in
             
             request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: cordinatesFrom!.latitude, longitude: cordinatesFrom!.longitude), addressDictionary: nil))
             
-            self.getCordinates(location: self.locationTo) { (cordinatesTo: CLLocationCoordinate2D?, error: Error?) in
+            self.getCordinates(location: self.mkLocationTo) { (cordinatesTo: CLLocationCoordinate2D?, error: Error?) in
                 request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: cordinatesTo!.latitude, longitude: cordinatesTo!.longitude), addressDictionary: nil))
                 let directions = MKDirections(request: request)
                 directions.calculate {response, error in
                     guard let unwrappedResponse = response else { return }
-
+                    
                     let travelTime = unwrappedResponse.routes[0].expectedTravelTime
                     completion(travelTime,error)
-
+                    
                     //self.AraivalDate.text = String(Int(travelTime/60))
                     //print(Int(travelTime/60))
                 }
@@ -101,8 +136,9 @@ class MyMapClass: MyMapProtocol{
 
 // MapKit methods
 extension LocationSearchViewController: MKLocalSearchCompleterDelegate, MKMapViewDelegate {
-   func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-    mainView!.myMapSearch.searchResults = completer.results
-       self.tableViewOutlet.reloadData()
-   }
+
+    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
+        mainView!.myMapSearch.mkSearchResults = completer.results
+        self.tableViewOutlet.reloadData()
+    }
 }

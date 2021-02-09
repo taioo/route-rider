@@ -13,11 +13,11 @@ import CoreData
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var toButton: UIButton!
-    @IBOutlet weak var fromButton: UIButton!
+    @IBOutlet weak var toButton: RoundButton!
+    @IBOutlet weak var fromButton: RoundButton!
     @IBOutlet weak var fromDatePicker: UIDatePicker!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var araivalDate: UIButton!
+    @IBOutlet weak var saveButton: RoundButton!
+    @IBOutlet weak var toDatePicker: UIDatePicker!
     
     private var fromDate: Date?
     private var toDate: Date?
@@ -30,21 +30,29 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        toDatePicker.isEnabled = false
+        toDatePicker.isHighlighted = true
         // Do any additional setup after loading the view.
         saveButton.isEnabled = false
         saveButton.alpha = 0.5
         fromDate = fromDatePicker.date
-        araivalDate.isEnabled = false
-        araivalDate.alpha = 0.5
     }
     
     
     @IBAction func saveRoute(_ sender: UIButton) {
         // save to coredata
-        DataClass().createData(fromDate: fromDate, toDate: toDate, locationFrom: myMapSearch.getTitelLocationFrom(), locationTo: myMapSearch.getTitelLocationTo());
+        DataClass().createData(
+            fromDate: fromDate,
+            toDate: toDate,
+            locationFrom: myMapSearch.locationFrom!.title,
+            locationTo: myMapSearch.locationTo!.title
+        );
         saveButton.isEnabled = false
         saveButton.alpha = 0.5
         routesTable?.refresh()
+        fromButton.backgroundImageColor = UIColor.lightGray
+        toButton.backgroundImageColor = UIColor.lightGray
     }
     
     @IBAction func datePickerChanged(sender: UIDatePicker) {
@@ -80,33 +88,26 @@ class MainViewController: UIViewController {
         if( lastButton == fromButton ) {
             myMapSearch.saveLocationFrom(index: index)
             lastButton?.setTitle(myMapSearch.locationFrom?.title, for: .normal)
-            myMapSearch.searchResults.removeAll()
+            myMapSearch.emptySearchResult()
+            fromButton.backgroundImageColor = UIColor.systemGreen
+            
         } else if(lastButton == toButton){
             myMapSearch.saveLocationTo(index: index)
             lastButton?.setTitle(myMapSearch.locationTo?.title, for: .normal)
-            myMapSearch.searchResults.removeAll()
+            myMapSearch.emptySearchResult()
+            toButton.backgroundImageColor = UIColor.systemGreen
         }
 
         if( myMapSearch.locationFrom != nil && myMapSearch.locationTo != nil ) {
-            myMapSearch.calculateTimeForRoute() { (travelTime: Double?, error: Error?) -> Void in
+            myMapSearch.calculateTimeForRoute() { (travelTime: Double?, error: Error?) in
                 // save enabled
                 //let travelTimeInMin = Int(travelTime!/60)
                 self.toDate = self.fromDate?.addingTimeInterval(travelTime!)
+                self.toDatePicker.date = self.toDate!
                 self.saveButton.isEnabled = true
                 self.saveButton.alpha = 1
-                self.araivalDate.setTitle(self.toDate?.asString(style: .full) , for: .normal)
-                self.araivalDate.isEnabled = true
-                self.araivalDate.alpha = 1
+                self.saveButton.backgroundImageColor = UIColor.systemGreen
             }
         }
     }
-}
-
-extension Date {
-  func asString(style: DateFormatter.Style) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateStyle = style
-    dateFormatter.timeStyle = .short
-    return dateFormatter.string(from: self)
-  }
 }
