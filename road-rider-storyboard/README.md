@@ -3,11 +3,11 @@ Libraries
 * MapKit
 * CoreData
 
-![white Mode](https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif)
 
+<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif" width="250" height="500"/>
 <br>
+<img src="https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/w.gif" width="250" height="500"/>
 
-![dark Mode](https://github.com/taioo/route-rider/blob/master/road-rider-storyboard/attachment/d.gif)
 
 
 <img src="attachment/diagram/1.png"/>
