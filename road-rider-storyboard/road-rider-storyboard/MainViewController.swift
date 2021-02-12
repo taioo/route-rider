@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
     private var locationTo: MKLocalSearchCompletion?
     private var routesTable: RoutesTableViewController?
 
-    var myMapSearch = MyMapClass()
+    var myMapSearch = LocationClass()
 
     override func viewDidLoad() {
         super.viewDidLoad()

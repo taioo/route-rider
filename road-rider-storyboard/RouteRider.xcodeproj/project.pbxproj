@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E03A3BF925C860DA00C6E9E4 /* LocationManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BF825C860DA00C6E9E4 /* LocationManage.swift */; };
-		E03A3C0025C8612700C6E9E4 /* DataManageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BFF25C8612700C6E9E4 /* DataManageProtocol.swift */; };
-		E0729EC225BF253800BE2894 /* RouteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */; };
-		E0729EC325BF253800BE2894 /* RouteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */; };
+		E03A3BF925C860DA00C6E9E4 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BF825C860DA00C6E9E4 /* LocationClass.swift */; };
+		E03A3C0025C8612700C6E9E4 /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BFF25C8612700C6E9E4 /* DataProtocol.swift */; };
+		E0729EC225BF253800BE2894 /* RouteEntityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC025BF253800BE2894 /* RouteEntityClass.swift */; };
+		E0729EC325BF253800BE2894 /* RouteEntityProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC125BF253800BE2894 /* RouteEntityProperties.swift */; };
 		E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */; };
 		E0729ECF25BF258A00BE2894 /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */; };
 		E0AF67B32598C8FE00C5262F /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */; };
@@ -21,18 +21,21 @@
 		E0F8ADF525487B7600D2F81B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F8ADF325487B7600D2F81B /* Main.storyboard */; };
 		E0F8ADFA25487B7A00D2F81B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F8ADF925487B7A00D2F81B /* Assets.xcassets */; };
 		E0F8ADFD25487B7A00D2F81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F8ADFB25487B7A00D2F81B /* LaunchScreen.storyboard */; };
+		E0FCB4D225D7027000EC436E /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCB4D125D7027000EC436E /* DataClass.swift */; };
+		E0FCB4DD25D703D900EC436E /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCB4DC25D703D900EC436E /* LocationModel.swift */; };
+		E0FCB4E025D7040F00EC436E /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCB4DF25D7040F00EC436E /* LocationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E03A3BF825C860DA00C6E9E4 /* LocationManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManage.swift; sourceTree = "<group>"; };
-		E03A3BFF25C8612700C6E9E4 /* DataManageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManageProtocol.swift; sourceTree = "<group>"; };
-		E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E03A3BF825C860DA00C6E9E4 /* LocationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationClass.swift; path = "road-rider-storyboard/LocationClass.swift"; sourceTree = SOURCE_ROOT; };
+		E03A3BFF25C8612700C6E9E4 /* DataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
+		E0729EC025BF253800BE2894 /* RouteEntityClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteEntityClass.swift; sourceTree = "<group>"; };
+		E0729EC125BF253800BE2894 /* RouteEntityProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteEntityProperties.swift; sourceTree = "<group>"; };
 		E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoutesModel.xcdatamodel; sourceTree = "<group>"; };
 		E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
 		E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		E0B6463925D2C2EE00F11A07 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		E0DA82F525A229CF004E2F15 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E0DA82F525A229CF004E2F15 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "road-rider-storyboard/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E0F8ADEA25487B7600D2F81B /* road-rider-storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "road-rider-storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F8ADED25487B7600D2F81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F8ADEF25487B7600D2F81B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		E0F8ADF925487B7A00D2F81B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0F8ADFC25487B7A00D2F81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0F8ADFE25487B7A00D2F81B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FCB4D125D7027000EC436E /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		E0FCB4DC25D703D900EC436E /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationModel.swift; path = "road-rider-storyboard/LocationModel.swift"; sourceTree = SOURCE_ROOT; };
+		E0FCB4DF25D7040F00EC436E /* LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationProtocol.swift; path = "road-rider-storyboard/LocationProtocol.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,23 +78,58 @@
 		E0F8ADEC25487B7600D2F81B /* road-rider-storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */,
+				E0FCB4D925D7038B00EC436E /* MapManagement */,
+				E0FCB4CF25D701F600EC436E /* DataManagement */,
+				E0FCB4C825D700E500EC436E /* Storyboards */,
+				E0FCB4CB25D7017B00EC436E /* View */,
 				E0F8ADED25487B7600D2F81B /* AppDelegate.swift */,
 				E0F8ADEF25487B7600D2F81B /* SceneDelegate.swift */,
-				E0DA82F525A229CF004E2F15 /* MainViewController.swift */,
-				E0F8ADF325487B7600D2F81B /* Main.storyboard */,
 				E0F8ADF925487B7A00D2F81B /* Assets.xcassets */,
-				E0F8ADFB25487B7A00D2F81B /* LaunchScreen.storyboard */,
 				E0F8ADFE25487B7A00D2F81B /* Info.plist */,
-				E03A3BFF25C8612700C6E9E4 /* DataManageProtocol.swift */,
-				E0729EC025BF253800BE2894 /* RouteEntity+CoreDataClass.swift */,
-				E03A3BF825C860DA00C6E9E4 /* LocationManage.swift */,
-				E0729EC125BF253800BE2894 /* RouteEntity+CoreDataProperties.swift */,
-				E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */,
-				E0B6463925D2C2EE00F11A07 /* RoundButton.swift */,
-				E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */,
 			);
 			path = "road-rider-storyboard";
+			sourceTree = "<group>";
+		};
+		E0FCB4C825D700E500EC436E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E0F8ADFB25487B7A00D2F81B /* LaunchScreen.storyboard */,
+				E0F8ADF325487B7600D2F81B /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E0FCB4CB25D7017B00EC436E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0DA82F525A229CF004E2F15 /* MainViewController.swift */,
+				E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */,
+				E0B6463925D2C2EE00F11A07 /* RoundButton.swift */,
+				E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E0FCB4CF25D701F600EC436E /* DataManagement */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3BFF25C8612700C6E9E4 /* DataProtocol.swift */,
+				E0FCB4D125D7027000EC436E /* DataClass.swift */,
+				E0729EC025BF253800BE2894 /* RouteEntityClass.swift */,
+				E0729EC125BF253800BE2894 /* RouteEntityProperties.swift */,
+			);
+			name = DataManagement;
+			sourceTree = "<group>";
+		};
+		E0FCB4D925D7038B00EC436E /* MapManagement */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3BF825C860DA00C6E9E4 /* LocationClass.swift */,
+				E0FCB4DC25D703D900EC436E /* LocationModel.swift */,
+				E0FCB4DF25D7040F00EC436E /* LocationProtocol.swift */,
+				E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */,
+			);
+			name = MapManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,16 +202,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FCB4E025D7040F00EC436E /* LocationProtocol.swift in Sources */,
 				E0F8ADEE25487B7600D2F81B /* AppDelegate.swift in Sources */,
 				E0F8ADF025487B7600D2F81B /* SceneDelegate.swift in Sources */,
 				E0AF67B32598C8FE00C5262F /* LocationSearchViewController.swift in Sources */,
 				E0DA82F625A229CF004E2F15 /* MainViewController.swift in Sources */,
 				E0B6463A25D2C2EE00F11A07 /* RoundButton.swift in Sources */,
-				E03A3C0025C8612700C6E9E4 /* DataManageProtocol.swift in Sources */,
+				E03A3C0025C8612700C6E9E4 /* DataProtocol.swift in Sources */,
+				E0FCB4D225D7027000EC436E /* DataClass.swift in Sources */,
 				E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */,
-				E0729EC325BF253800BE2894 /* RouteEntity+CoreDataProperties.swift in Sources */,
-				E0729EC225BF253800BE2894 /* RouteEntity+CoreDataClass.swift in Sources */,
-				E03A3BF925C860DA00C6E9E4 /* LocationManage.swift in Sources */,
+				E0729EC325BF253800BE2894 /* RouteEntityProperties.swift in Sources */,
+				E0729EC225BF253800BE2894 /* RouteEntityClass.swift in Sources */,
+				E0FCB4DD25D703D900EC436E /* LocationModel.swift in Sources */,
+				E03A3BF925C860DA00C6E9E4 /* LocationClass.swift in Sources */,
 				E0729ECF25BF258A00BE2894 /* RoutesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

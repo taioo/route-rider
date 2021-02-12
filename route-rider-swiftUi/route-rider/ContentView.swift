@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showAddItemView = false
     @State private var pickerDate = Date()
-    @State private var buttonname: String = "Button title"
+    @State private var buttonname: String = "Search Place"
     
     
     var body: some View{
@@ -20,12 +20,17 @@ struct ContentView: View {
    
             VStack {
            
+                buttonview(name: buttonname, color:Color.green ,actionScope: {showAddItemView = true})
                 datePickerView(date: $pickerDate)
-                buttonview(name: buttonname, actionScope: {showAddItemView = true})
+                buttonview(name: buttonname, color:Color.blue ,actionScope: {showAddItemView = true})
                 datePickerView(date: $pickerDate)
-                buttonview(name: buttonname, actionScope: {showAddItemView = true})
-                buttonview(name: "add Route", actionScope: {})
                 
+                Button(action: {}) {
+                    Text("Click me!")
+                }
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.red)
                 
             List{
                     ListElementView()
@@ -51,11 +56,13 @@ private func datePickerView(date: Binding<Date>) -> some View {
 
 
 
-private func buttonview(name: String, actionScope: @escaping () -> Void  ) -> some View {
+private func buttonview(name: String, color: Color ,actionScope: @escaping () -> Void  ) -> some View {
     return Button(action: actionScope) {
         Text(name)
     }
     .padding()
+    .foregroundColor(.white)
+    .background(color)
 }
 
 

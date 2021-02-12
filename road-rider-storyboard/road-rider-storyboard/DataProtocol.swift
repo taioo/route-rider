@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol DataProtocol {
     var myData: [RouteEntity] { get }
     func createData(fromDate: Date?, toDate: Date? , locationFrom: String? , locationTo: String?)

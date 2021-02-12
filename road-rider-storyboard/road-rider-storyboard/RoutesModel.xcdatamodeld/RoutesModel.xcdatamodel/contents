@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="RouteEntity" representedClassName=".RouteEntity" isAbstract="YES" syncable="YES">
         <attribute name="dateFrom" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateTo" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
