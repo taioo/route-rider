@@ -9,7 +9,7 @@ Libraries
 ## Developed with UIKit
 
 <p float="left">
-<img src="https://github.com/taioo/route-rider/blob/master/attachment/d.gif" height="500"/>
+<img src="https://github.com/taioo/route-rider/blob/master/attachment/w.gif" height="500"/>
 <img src="https://github.com/taioo/route-rider/blob/master/attachment/d.gif"  height="500"/>
 </p>
 
