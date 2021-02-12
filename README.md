@@ -1,4 +1,4 @@
-# RoadRider 
+# RouteRider 
 An app to find locations and calculate the distance. The calculation and the associated information are saved as routes in the app.
 
 Libraries
