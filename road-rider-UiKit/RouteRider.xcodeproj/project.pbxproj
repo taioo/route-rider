@@ -11,7 +11,7 @@
 		E03A3C0025C8612700C6E9E4 /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3BFF25C8612700C6E9E4 /* DataProtocol.swift */; };
 		E0729EC225BF253800BE2894 /* RouteEntityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC025BF253800BE2894 /* RouteEntityClass.swift */; };
 		E0729EC325BF253800BE2894 /* RouteEntityProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729EC125BF253800BE2894 /* RouteEntityProperties.swift */; };
-		E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */; };
+		E0729ECC25BF256300BE2894 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECA25BF256200BE2894 /* Data.xcdatamodeld */; };
 		E0729ECF25BF258A00BE2894 /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0729ECE25BF258A00BE2894 /* RoutesTableViewController.swift */; };
 		E0AF67B32598C8FE00C5262F /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF67B22598C8FE00C5262F /* LocationSearchViewController.swift */; };
 		E0B6463A25D2C2EE00F11A07 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6463925D2C2EE00F11A07 /* RoundButton.swift */; };
@@ -78,7 +78,7 @@
 		E0F8ADEC25487B7600D2F81B /* road-rider-storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E0FCB4D925D7038B00EC436E /* MapManagement */,
+				E0FCB4D925D7038B00EC436E /* LocationManagement */,
 				E0FCB4CF25D701F600EC436E /* DataManagement */,
 				E0FCB4C825D700E500EC436E /* Storyboards */,
 				E0FCB4CB25D7017B00EC436E /* View */,
@@ -113,6 +113,7 @@
 		E0FCB4CF25D701F600EC436E /* DataManagement */ = {
 			isa = PBXGroup;
 			children = (
+				E0729ECA25BF256200BE2894 /* Data.xcdatamodeld */,
 				E03A3BFF25C8612700C6E9E4 /* DataProtocol.swift */,
 				E0FCB4D125D7027000EC436E /* DataClass.swift */,
 				E0729EC025BF253800BE2894 /* RouteEntityClass.swift */,
@@ -121,15 +122,14 @@
 			name = DataManagement;
 			sourceTree = "<group>";
 		};
-		E0FCB4D925D7038B00EC436E /* MapManagement */ = {
+		E0FCB4D925D7038B00EC436E /* LocationManagement */ = {
 			isa = PBXGroup;
 			children = (
 				E03A3BF825C860DA00C6E9E4 /* LocationClass.swift */,
 				E0FCB4DC25D703D900EC436E /* LocationModel.swift */,
 				E0FCB4DF25D7040F00EC436E /* LocationProtocol.swift */,
-				E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */,
 			);
-			name = MapManagement;
+			name = LocationManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +210,7 @@
 				E0B6463A25D2C2EE00F11A07 /* RoundButton.swift in Sources */,
 				E03A3C0025C8612700C6E9E4 /* DataProtocol.swift in Sources */,
 				E0FCB4D225D7027000EC436E /* DataClass.swift in Sources */,
-				E0729ECC25BF256300BE2894 /* RoutesModel.xcdatamodeld in Sources */,
+				E0729ECC25BF256300BE2894 /* Data.xcdatamodeld in Sources */,
 				E0729EC325BF253800BE2894 /* RouteEntityProperties.swift in Sources */,
 				E0729EC225BF253800BE2894 /* RouteEntityClass.swift in Sources */,
 				E0FCB4DD25D703D900EC436E /* LocationModel.swift in Sources */,
@@ -419,13 +419,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E0729ECA25BF256200BE2894 /* RoutesModel.xcdatamodeld */ = {
+		E0729ECA25BF256200BE2894 /* Data.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */,
 			);
 			currentVersion = E0729ECB25BF256200BE2894 /* RoutesModel.xcdatamodel */;
-			path = RoutesModel.xcdatamodeld;
+			path = Data.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
