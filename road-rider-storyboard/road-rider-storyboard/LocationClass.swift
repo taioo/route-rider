@@ -9,25 +9,8 @@
 import Foundation
 import MapKit
 
-struct Location {
-    var title: String
-    var subtitle: String
-}
 
-
-protocol MyMapProtocol{
-    var searchResults: [Location] { get }
-    var locationFrom: Location? { get }
-    var locationTo: Location? { get }
-    
-    func setQueryFragment(text: String)
-    func saveLocationFrom(index: Int)
-    func saveLocationTo(index: Int)
-    func setDelegate(delegateObject: Any)
-    func calculateTimeForRoute(completion: @escaping (Double?, Error?) -> Void)
-}
-
-class MyMapClass: MyMapProtocol{
+class LocationClass: LocationProtocol{
     
     var mkSearchResults: [MKLocalSearchCompletion]
     private var mkSearchCompleter: MKLocalSearchCompleter
