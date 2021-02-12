@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  RouteRider
 //
-//  Created by Thaer Aldefai on 14.12.20.
+//  Created by Thaer on 14.12.20.
 //  Copyright © 2020 Thaer Aldefai. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  addILocatinView.swift
 //  route-rider
 //  
-//  Created by Thaer Aldefai on 24.10.20.
+//  Created by Thaer on 24.10.20.
 //
 
 import SwiftUI

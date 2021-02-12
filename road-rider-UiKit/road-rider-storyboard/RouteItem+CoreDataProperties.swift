@@ -2,7 +2,7 @@
 //  RouteItem+CoreDataProperties.swift
 //  RouteRider
 //
-//  Created by Thaer Aldefai on 07.01.21.
+//  Created by Thaer on 07.01.21.
 //  Copyright © 2020 Thaer Aldefai. All rights reserved.
 //
 //

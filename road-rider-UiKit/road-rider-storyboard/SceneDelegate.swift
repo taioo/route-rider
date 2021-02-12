@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  RouteRider
 //
-//  Created by Thaer Aldefai on 27.10.20.
+//  Created by Thaer on 27.10.20.
 //  Copyright © 2020 Thaer Aldefai. All rights reserved.
 //
 

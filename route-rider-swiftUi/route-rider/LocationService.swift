@@ -2,7 +2,7 @@
 //  LocationService.swift
 //  route-rider
 //  https://github.com/peteralt/mapKitLocationSearchWithSwiftUI
-//  Created by Thaer Aldefai on 27.10.20.
+//  Created by Thaer on 27.10.20.
 //
 
 import Foundation

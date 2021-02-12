@@ -2,7 +2,7 @@
 //  DataProtocol.swift
 //  RouteRider
 //
-//  Created by Thaer Aldefai on 30.01.21.
+//  Created by Thaer on 30.01.21.
 //  Copyright © 2020 Thaer Aldefai. All rights reserved.
 //
 

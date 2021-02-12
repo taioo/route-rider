@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  route-rider
 //
-//  Created by Thaer Aldefai on 23.10.20.
+//  Created by Thaer on 23.10.20.
 //
 
 import SwiftUI
